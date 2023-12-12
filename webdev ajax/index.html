@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>My Posts App</title>
+</head>
+<body>
+    <header>
+        <h1>My Posts App</h1>
+        <button id="toggleTheme">Toggle Theme</button>
+    </header>
+
+    <main>
+        <div id="posts" class="posts-container">
+        </div>
+    </main>
+
+    <footer>
+        <button id="addPost">Add Post</button>
+    </footer>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Create/Edit Post</h2>
+            <form id="postForm">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" required>
+
+                <label for="body">Body:</label>
+                <textarea id="body" name="body" required></textarea>
+
+                <label for="userId">Author:</label>
+                <select id="userId" name="userId" required>
+                    <!-- Options will be populated using AJAX -->
+                </select>
+
+                <button type="submit">Save Post</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Hidden button for triggering the modal -->
+    <button id="openCreatePostModal" style="display: none;"></button>
+
+    <script src="app.js"></script>
+</body>
+</html>
